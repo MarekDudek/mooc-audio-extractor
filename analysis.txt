@@ -1,0 +1,17 @@
+
+
+labels:
+
+	artist		- Cloudera
+	album		- nazwa kursu - Economics of Money and Banking, Part One
+	discnumber      - numer wykładu
+			- tytuł wykładu
+	tracknumber	- wewnątrz 
+	title		- pojedynczej ścieżki
+			
+wywołanie, które wygenerowało mp3-ki
+
+find /home/marek/Education/finance/Economics\ of\ Money\ and\ Banking\,\ Part\ One/ -name '*.mp4' -print0 | xargs -0 ./i-accept-from-find.sh
+
+
+itunesmediatype
