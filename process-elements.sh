@@ -5,15 +5,11 @@ do
 	echo - processing \"$ELEMENT\"
 	RELATIVE_PATH="${ELEMENT#$INPUT_DIR}"
 	if [ -d "$ELEMENT" ]; then
-		if [ "$ELEMENT" == "${INPUT_DIR}" ]; then
-			if [ -d "${OUTPUT_DIR}" ]; then
-				echo Error, output directory \"${INPUT_DIR}\" already exists!
-				exit 1
-			else
-				mkdir "${OUTPUT_DIR}"
-			fi
+		DIR_TO_MAKE="${OUTPUT_DIR}/${RELATIVE_PATH}"
+		if [ -d "${DIR_TO_MAKE}" ]; then
+			echo Error, output directory \"${DIR_TO_MAKE}\" already exists! ; exit 1
 		else
-			mkdir "${OUTPUT_DIR}/${RELATIVE_PATH}"
+			mkdir "${DIR_TO_MAKE}"
 		fi
 	fi
 	if [ -f "$ELEMENT" ]; then
