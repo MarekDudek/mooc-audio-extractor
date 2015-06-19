@@ -1,8 +1,14 @@
 #!/bin/bash
 
 echo On every element
+echo output is ${OUTPUT_DIR}
 
-for line in "$@"
+for path in "$@"
 do
-	echo Doing sth with $line
+	if [ -d "$path" ]; then
+		echo - directory $path
+	fi
+	if [ -f "$path" ]; then
+		echo - file $path 
+	fi
 done
