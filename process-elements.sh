@@ -15,6 +15,7 @@ do
 	if [ -f "$ELEMENT" ]; then
 		OUTPUT_FILE=${OUTPUT_DIR}/${RELATIVE_PATH%.*}.mp3
 		./extract-audio-from-to.sh "${ELEMENT}" "${OUTPUT_FILE}"
-		eyeD3 --artist Coursera "${OUTPUT_FILE}"
+		eyeD3 --remove-all "${OUTPUT_FILE}"
+		eyeD3 --artist MOOC "${OUTPUT_FILE}"
 	fi
 done
