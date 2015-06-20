@@ -15,3 +15,10 @@ find /home/marek/Education/finance/Economics\ of\ Money\ and\ Banking\,\ Part\ O
 
 
 itunesmediatype
+
+
+drag and drop: ignored 'file:///home/marek/Devel/mulfin/emb'.
+reason: No track information could be retrieved from the file /home/marek/Devel/mulfin/emb/Lec 10: Dealers and Liquid Security Markets/11 - 7 - 10-7 Arbitrage and the assumption of perfect liquidity (9-41).mp3 due to the following error:
+
+File "/home/marek/Devel/mulfin/emb/Lec 10: Dealers and Liquid Security Markets/11 - 7 - 10-7 Arbitrage and the assumption of perfect liquidity (9-41).mp3" has zero play length. Ignoring.
+ 

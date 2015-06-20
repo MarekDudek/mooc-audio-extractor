@@ -1,5 +1,8 @@
 #!/bin/bash
 
+COURSE_TITLE="$(basename "$INPUT_DIR")"
+ARTIST=$COURSE_TITLE
+
 for ELEMENT in "$@"
 do
 	echo - processing \"$ELEMENT\"
@@ -16,6 +19,10 @@ do
 		OUTPUT_FILE=${OUTPUT_DIR}/${RELATIVE_PATH%.*}.mp3
 		./extract-audio-from-to.sh "${ELEMENT}" "${OUTPUT_FILE}"
 		eyeD3 --remove-all "${OUTPUT_FILE}"
-		eyeD3 --artist MOOC "${OUTPUT_FILE}"
+		LECTURE_TITLE="$(basename "$(dirname "$ELEMENT")")"
+		ALBUM=$LECTURE_TITLE
+		eyeD3   --artist "$ARTIST" \
+			--album  "$ALBUM"  \
+			"${OUTPUT_FILE}"
 	fi
 done
